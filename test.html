@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The focus() Method</h2>
+
+<p>The text field below gets focus immediately after the document window has been loaded.</p>
+<input type="text" id="false" value="A text field"> 
+<input type="text" id="myText" value="A text field">
+
+<script>
+console.log(document.activeElement)
+document.getElementById("false").focus()
+
+window.alert("False")
+document.getElementById("false").blur()
+
+  document.getElementById("myText").focus();
+
+  console.log(document.activeElement)
+
+</script>
+
+</body>
+</html>
