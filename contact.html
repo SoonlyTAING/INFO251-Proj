@@ -35,6 +35,7 @@
               <p><span class="tag"></span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
         
             <h2>Love to hear from you, get in tough👋🏻</h2>
+            
             <form>
             <label for="Firstname">First Name<br></label>
             <input type="text" name="fname" id="fname"
@@ -47,11 +48,28 @@
             <label for="myEmail">E-mail<br></label>
             <input type="email" name="myEmail" id="myEmail"
             placeholder="E-mail Address"
-            required><br>
-            <label for="comments">Comments</label>
-            <textarea id="myComments" name="myComments" placeholder="Write something.." style="height:200px" required></textarea>
+            required><br> 
+            <h3> Rate Your Experience with Our restaurant</h3>
+            
+ <!-- 5-star rating system with radio buttons-->
+        <div class="rating">
+            <input type="radio" name="rating" value="5" id="star5"><label for="star5">&#9733;</label>
+            <input type="radio" name="rating" value="4" id="star4"><label for="star4">&#9733;</label>
+            <input type="radio" name="rating" value="3" id="star3"><label for="star3">&#9733;</label>
+            <input type="radio" name="rating" value="2" id="star2"><label for="star2">&#9733;</label>
+            <input type="radio" name="rating" value="1" id="star1"><label for="star1">&#9733;</label>
+        </div><br>
+  
+ <!-- Feedback section with textarea -->
+            <label for="feedback">Your Feedback<br></label>
+            <textarea id="feedback" name="feedback" placeholder="Write something..." style="height:200px" required></textarea>
+ 
+ <!-- Display feedback section -->
+            <div id="feedback-container"></div>
+            <script src="contact.js"></script>
 
-            <input type="submit" value="Contact"> <input type="reset" value="Reset">
+            <input type="submit" onclick="submitRating()" value="Submit Rating"><input type="reset" value="Reset">   
+            
             </form>
         </div>
         

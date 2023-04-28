@@ -1,30 +1,74 @@
 
+var Strings=JSON.parse(localStorage.getItem('addArray')) || [];
+var total=0;
+function update(){
+    total=0
+        $('.ordered .subp').each(function() {
+            var p = $(this).text();
+            p=parseFloat(p)
+            total+=p
+            
+          });
+        
+          console.log(total)
+          let str = total.toFixed(2) + " USD"
+          $(".tp").text(str);
+}
 $(document).ready(function() {
     
+    for (let i=0; i<Strings.length; i++){
+        console.log(Strings.length)
+        console.log(i)
+        console.log(Strings[i])
+        $(".ordered tr:first").after(Strings[i])}
+    $('.remove').click(function(event){
+
+        console.log(Strings);
+        event.preventDefault();
+        console.log("running")
+        console.log($(this).closest("tr"))
+        if ($(this).closest("tr").attr("class")=="added"){
+            let x = $(this).closest("tr").map(function() {
+                return "    <tr class='added'>" + $(this).html() + '</tr>';
+            }).get();
+            console.log(x[0])
+            console.log(Strings.length)
+            var index = Strings.indexOf(x[0]);
+        if (index !== -1) {
+        Strings.splice(index, 1);
+        localStorage.setItem('addArray', JSON.stringify(Strings));
+        }
+        console.log(Strings.length)
+        }
+        $(this).closest("tr").remove();
+        update();
+        
+    });
+    update();
+
 });
-$('.remove').click(function(event){
-    event.preventDefault();
-    console.log("running")
-    console.log($(this).closest("tr"))
-    if ($(this).closest("tr").attr("class")=="added"){
-        let x=$(this).closest("tr").map(function() {
-            return $(this).html();
-        }).get();
-        console.log(x)
-    }
-    $(this).closest("tr").remove();
-});
-const myData = localStorage.getItem("add")
-$(".ordered tr:first").after(myData);
+
+
+
 $('form input[type="submit"]').on('click', function(event) {
+    let isValid=true;
+    console.log(Strings);
     event.preventDefault();
     const formId = $(this).closest('form').attr('id');
-    var add, quant, mid, subp;
+    $('.required').each(function() {
+        if ($(this).val() === '') {
+          isValid = false;
+        }
+      });
+      if (!isValid){
+        window.alert("Make sure to fill everything")
+      } else {
+        var add, quant, mid, subp;
 
     mid=''
     quant="";
     subp=""
-    add=localStorage.getItem("add")
+    add=''
     console.log(`formId: ${formId}`);
     {
         let value=formId
@@ -93,24 +137,34 @@ $('form input[type="submit"]').on('click', function(event) {
         console.log(quantity)
         
         let temp=price * quantity
-        console.log(temp)
         
+        temp=temp.toFixed(2)
+        console.log(temp)
         subp=`        <td class="subp"><h3>${temp} USD</h3></td>\n`
       }
     }
     mid+=`            </ul>\n        </td>\n`
 
-    add+= "    <tr class='added'>"+ quant + mid + subp+'         <td class="rem"><h3><a href="" class="remove">Remove</a></h3></td>'
+    add+= "    <tr class='added'>"+ quant + mid + subp+'         <td class="rem"><h3><a href="" class="remove">Remove</a></h3></td></tr>'
+    console.log("add")
     console.log(add)
-    localStorage.setItem("add", add);
+    Strings.push(add);
+    console.log(typeof(Strings))
     
-    // const str = formId;
-    // let targetId = str.replace('form', 'dropdown');
-    // targetId="#"+targetId
-    // let target=document.querySelector(targetId);
+    localStorage.setItem('addArray', JSON.stringify(Strings));
+    let myData = localStorage.getItem("addArray")
+    console.log(typeof(myData))
+    console.log(myData)
+    
+    
+    const str = formId;
+    let targetId = str.replace('form', 'dropdown');
+    targetId="#"+targetId
+    let target=document.querySelector(targetId);
 
-    // let popup=target.querySelectorAll(".popup")[0]
-    // close(target,popup)
+    let popup=target.querySelectorAll(".popup")[0]
+    close(target,popup)
+      }
   });
 
 // console.log("isrunning")
