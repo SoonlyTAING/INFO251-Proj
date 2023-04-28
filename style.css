@@ -249,7 +249,7 @@ body{
     grid-auto-rows: 1fr;
     grid-template-areas:
     'waffles pancakes crepes'
-    'cereal french_toast sandwich';
+    'cereal french-toast sandwich';
     gap: 3%;
     transition: all 0.5s ease 0.1s;
     padding-bottom: 5vw;
@@ -453,7 +453,7 @@ body{
     grid-auto-rows: 1fr;
     grid-template-areas:
     'coffee milkshake tea'
-    'hotchoco soda juice';
+    'choco soda juice';
     gap: 3%;
     transition: all 0.5s ease 0.1s;
     padding-bottom: 5vw;
@@ -467,8 +467,8 @@ body{
 .tea{
     grid-area:tea;
 }
-.hotchoco{
-    grid-area: hotchoco;
+.choco{
+    grid-area: choco;
 }
 .soda{
     grid-area:soda
@@ -488,8 +488,8 @@ body{
 .cereal{
     grid-area: cereal;
 }
-.french_toast{
-    grid-area:french_toast;
+.french-toast{
+    grid-area:french-toast;
 }
 .sandwich{
     grid-area: sandwich;
@@ -619,8 +619,8 @@ div a{
     float:right;
     display: inline;
     position: absolute;
-    top: 5vh;
-    right: 3vw;
+    top: 3%;
+    right: 5%;
     transition: all 200ms;
     font-size: 30px;
     font-weight: bold;
@@ -680,6 +680,12 @@ form{
     overflow-x: hidden;
     padding-left:5%;
 }
+.remove{
+    color:red;
+}
+.remove:visited{
+    color:red;
+}
 form input[type=submit]{
     background-color: red;
     border: none;
@@ -695,6 +701,15 @@ form input[type=submit]{
     display: inline;
 
     float: right;
+}
+.subp{
+    width: 20%;
+}
+.quant{
+    width: 15%;
+}
+.rem{
+    width: 15%;
 }
 form input[type=number]{
     background-color: white;
@@ -759,7 +774,7 @@ label[for=quantity]{
 .main input[type=reset]:hover { 
     background-color: #dbcecd; 
   }
-.order table tr th{
+.ordered tr th{
     border-top:5px solid black;
     border-bottom:5px solid black;
     /* border-left:  1px black solid;
@@ -768,12 +783,17 @@ label[for=quantity]{
     padding:1vh 2vw 1vh 2vw;
     
 }
+tr{
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+}
 table{
     border-collapse: collapse;
     width: 100%;
 }
 .mid{
     text-align: left;
+    width: 50%;
 }
 td{
     text-align: center;
@@ -1013,20 +1033,20 @@ img[class=cropped2]{
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-areas:
-    'french_toast set hotchoco';
+    'french-toast set choco';
     gap: 3%;
 }
 
-.french_toast{
-    grid-area:french_toast;
+.french-toast{
+    grid-area:french-toast;
 }
 
 .set{
     grid-area: set;
 }
 
-.hotchoco{
-    grid-area: hotchoco;
+.choco{
+    grid-area: choco;
 }
 /*panha's css ^^^ */
 
@@ -1150,7 +1170,7 @@ img[class=cropped2]{
     grid-template-areas:
     'waffles pancakes'
     'crepes cereal'
-    'french_toast sandwich';
+    'french-toast sandwich';
     }
     .menu1 div a figure img{
         min-width: 16vw;
@@ -1175,7 +1195,7 @@ img[class=cropped2]{
     .drinks{
             grid-template-areas:
             'coffee milkshake'
-            'tea hotchoco'
+            'tea choco'
             'soda juice';
             }
     .drinks div a figure img{
@@ -1279,7 +1299,7 @@ img[class=cropped2]{
         grid-template-areas:
         'waffles' 'pancakes'
         'crepes' 'cereal'
-        'french_toast' 'sandwich';
+        'french-toast' 'sandwich';
         }
         .menu1 div a figure img{
 
@@ -1306,7 +1326,7 @@ img[class=cropped2]{
         .drinks{
                 grid-template-areas:
                 'coffee' 'milkshake'
-                'tea' 'hotchoco'
+                'tea' 'choco'
                 'soda' 'juice';
                 }
         .drinks div a figure img{

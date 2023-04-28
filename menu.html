@@ -89,7 +89,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="french_toast sele" id="french_toast">
+                <div class="french-toast sele" id="french-toast">
                     <a href="#french-toast-dropdown">
                         <figure>
                             <img  src="./french_toast.jpg" alt="french_toast">
@@ -103,7 +103,7 @@
                 <div class="sandwich sele" id="sandwich">
                     <a href="#sandwich-dropdown">
                         <figure>
-                            <img  src="./sandwich.jpg" alt="sandwiches">
+                            <img  src="./sandwich.jpg" alt="sandwich">
                             <figcaption>
                                 <h2> Sandwiches </h2>
                                 <p>Choose one of our selected sandwiches. Served with sides of chips or wedges and pickles or salad</p>
@@ -241,7 +241,7 @@
                                 </figure>
                             </a>
                         </div>
-                        <div class="hotchoco sele" id="choco">
+                        <div class="choco sele" id="choco">
                             <a href="#choco-dropdown">
                                 <figure>
                                     <img  src="./hotchoco.jpg" alt="hot chocolate">
@@ -330,9 +330,11 @@
                 <a class="close" href="#waffles">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="waffles-form">
+                        
                         <div class="type">
                             <h2 class="head1">Waffle (3.50 USD)</h2>
+                            <input type="hidden" name="price" value="3.5">
                             <input type="radio" required id="american" name="waffle-type" value="american_waffles" required>
                             <label for="american"> American Waffles</label><br>
                             <p> Crispy and light waffles</p>
@@ -357,14 +359,14 @@
                             <label for="peach">Peach</label><br class="breaker">
                             <br>
                             <h3>Syrups</h3>
-                            <input type="checkbox" id="chocolate_syrup" name="syrup" value="chocolate_syrup">
+                            <input type="radio" id="chocolate_syrup" name="syrup" value="chocolate_syrup">
                             <label for="chocolate_syrup">Chocolate Syrup</label><br class="breaker">
-                            <input type="checkbox" id="maple_syrup" name="syrup" value="maple_syrup">
+                            <input type="radio" id="maple_syrup" name="syrup" value="maple_syrup">
                             <label for="maple_syrup">Maple Syrup</label><br class="breaker">
-                            <input type="checkbox" id="strawberry_syrup" name="syrup" value="strawberry_syrup">
+                            <input type="radio" id="strawberry_syrup" name="syrup" value="strawberry_syrup">
                             <label for="strawberry_syrup">Strawberry Syrup</label><br class="breaker">
-                            <input type="checkbox" id="honey" name="syrup" value="honey">
-                            <label for="honey">Honey</label><br class="breaker">
+                            <input type="radio" id="honey" name="syrup" value="honey">
+                            <label for="honey">Honey</label>
                         </div>
                             <br>
                             <hr>
@@ -372,7 +374,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br>
                             <br>
                             <br>
@@ -389,9 +391,10 @@
                 <h1>Pancakes</h1>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="pancakes-form">
                         <div class="type">
                             <h2 class="head1">Pancake (3.50 USD)</h2>
+                            <input type="hidden" name="price" value="3.5">
                             <input type="radio" required id="regular_pancakes" name="pancake-type" value="regular_pancakes" >
                             <label for="regular_pancakes">Flapjacks</label><br>
                             <p> Thick and soft, made with milk, butter, and flour</p>
@@ -415,13 +418,13 @@
                             <label for="peach">Peach</label>
                             <br>
                             <h3>Syrups</h3>
-                            <input type="checkbox" id="chocolate_syrup" name="syrup" value="chocolate_syrup">
+                            <input type="radio" id="chocolate_syrup" name="syrup" value="chocolate_syrup">
                             <label for="chocolate_syrup">Chocolate Syrup</label><br class="breaker">
-                            <input type="checkbox" id="maple_syrup" name="syrup" value="maple_syrup">
+                            <input type="radio" id="maple_syrup" name="syrup" value="maple_syrup">
                             <label for="maple_syrup">Maple Syrup</label><br class="breaker">
-                            <input type="checkbox" id="strawberry_syrup" name="syrup" value="strawberry_syrup">
+                            <input type="radio" id="strawberry_syrup" name="syrup" value="strawberry_syrup">
                             <label for="strawberry_syrup">Strawberry Syrup</label><br class="breaker">
-                            <input type="checkbox" id="honey" name="syrup" value="honey">
+                            <input type="radio" id="honey" name="syrup" value="honey">
                             <label for="honey">Honey</label>
                             </div>
                             <br>
@@ -430,7 +433,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br>
                             <br>
                             <br>
@@ -445,9 +448,10 @@
                 <h1>Crepes </h1>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="crepes-form">
                         <div class="type">
                             <h2 class="head1">Crepes (3.50 USD)</h2>
+                            <input type="hidden" name="price" value="3.5">
                             <input type="radio" required id="crepe" name="crepe-type" value="crepe" >
                             <label for="crepe">Crepe</label><br>
                             <p> Thin and soft, made with milk, butter, and flour</p>
@@ -466,13 +470,13 @@
                             <label for="peach">Peach</label>
                             <br>
                             <h3>Syrups</h3>
-                            <input type="checkbox" id="chocolate_syrup" name="syrup" value="chocolate_syrup">
+                            <input type="radio" id="chocolate_syrup" name="syrup" value="chocolate_syrup">
                             <label for="chocolate_syrup">Chocolate Syrup</label><br class="breaker">
-                            <input type="checkbox" id="maple_syrup" name="syrup" value="maple_syrup">
+                            <input type="radio" id="maple_syrup" name="syrup" value="maple_syrup">
                             <label for="maple_syrup">Maple Syrup</label><br class="breaker">
-                            <input type="checkbox" id="strawberry_syrup" name="syrup" value="strawberry_syrup">
+                            <input type="radio" id="strawberry_syrup" name="syrup" value="strawberry_syrup">
                             <label for="strawberry_syrup">Strawberry Syrup</label><br class="breaker">
-                            <input type="checkbox" id="honey" name="syrup" value="honey">
+                            <input type="radio" id="honey" name="syrup" value="honey">
                             <label for="honey">Honey</label>
                             </div>
                             <br>
@@ -480,7 +484,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -492,14 +496,15 @@
                 </div>
                 <hr>
             </div>
-            <div id="cereal-dropdown" class="drop">
+            <div id="cereal-dropdown" class="drop" >
                 <div class="popup">
                 <h1>Cereal</h1>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="cereal-form">
                         <div class="type">
                             <h2 class="head1">Cereal (3.00 USD)</h2>
+                            <input type="hidden" name="price" value="3.0">
                             <input type="checkbox" id="cornflake" name="cereal-type" value="cornflake" >
                             <label for="cornflake">Cornflake</label><br>
                             <p> Crispy and light, made from rolled corn</p>
@@ -537,13 +542,13 @@
                             <label for="peach">Peach</label>
                             <br>
                             <h3>Syrups</h3>
-                            <input type="checkbox" id="chocolate_syrup" name="syrup" value="chocolate_syrup">
+                            <input type="radio" id="chocolate_syrup" name="syrup" value="chocolate_syrup">
                             <label for="chocolate_syrup">Chocolate Syrup</label><br class="breaker">
-                            <input type="checkbox" id="maple_syrup" name="syrup" value="maple_syrup">
+                            <input type="radio" id="maple_syrup" name="syrup" value="maple_syrup">
                             <label for="maple_syrup">Maple Syrup</label><br class="breaker">
-                            <input type="checkbox" id="strawberry_syrup" name="syrup" value="strawberry_syrup">
+                            <input type="radio" id="strawberry_syrup" name="syrup" value="strawberry_syrup">
                             <label for="strawberry_syrup">Strawberry Syrup</label><br class="breaker">
-                            <input type="checkbox" id="honey" name="syrup" value="honey">
+                            <input type="radio" id="honey" name="syrup" value="honey">
                             <label for="honey">Honey</label>
                             </div>
                             <br>
@@ -551,7 +556,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -563,15 +568,16 @@
                 </div>
                 <hr>
             </div>
-            <div id="french-toast-dropdown"class="drop">
+            <div id="french-toast-dropdown" class="drop">
                 <div class="popup">
                 <h1>French Toast</h1>
                 <a class="close" href="#french_toast">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="crepes-form">
                         <div class="type">
                             <h2 class="head1">French Toast (3.50 USD)</h2>
+                            <input type="hidden" name="price" value="3.5">
                             <input type="radio" required id="french_toast" name="french-toast-type" value="french_toast">
                             <label for="french_toast"> French Toast </label><br>
                             <p> Slices of bread, dipped in egg and fried in butter while topped with toppings of your choice</p>
@@ -589,13 +595,13 @@
                             <label for="peach">Peach</label>
                             <br>
                             <h3>Syrups</h3>
-                            <input type="checkbox" id="chocolate_syrup" name="syrup" value="chocolate_syrup">
+                            <input type="radio" id="chocolate_syrup" name="syrup" value="chocolate_syrup">
                             <label for="chocolate_syrup">Chocolate Syrup</label><br class="breaker">
-                            <input type="checkbox" id="maple_syrup" name="syrup" value="maple_syrup">
+                            <input type="radio" id="maple_syrup" name="syrup" value="maple_syrup">
                             <label for="maple_syrup">Maple Syrup</label><br class="breaker">
-                            <input type="checkbox" id="strawberry_syrup" name="syrup" value="strawberry_syrup">
+                            <input type="radio" id="strawberry_syrup" name="syrup" value="strawberry_syrup">
                             <label for="strawberry_syrup">Strawberry Syrup</label><br class="breaker">
-                            <input type="checkbox" id="honey" name="syrup" value="honey">
+                            <input type="radio" id="honey" name="syrup" value="honey">
                             <label for="honey">Honey</label>
                             </div>
                             <br>
@@ -604,7 +610,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -620,9 +626,9 @@
                 <a class="close" href="#menu2">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="menu2-form">
                         <h2 class="head1">Breakfast (6.50 USD)</h2>
-                            
+                        <input type="hidden" name="price" value="6.5">
                         <div class="bread">
                             <!-- <h2 class="head2">Bread</h2> -->
                             <h3>Bread</h3>
@@ -673,7 +679,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -686,12 +692,13 @@
             <div id="sandwich-dropdown" class="drop">
                 <div class="popup">
                 <h1>Sandwiches</h1>
-                <a class="close" href="#sandwiches">&times;</a>
+                <a class="close" href="#sandwich">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html" style="overflow-y:scroll ;">
+                    <form action="./menu.html" style="overflow-y:scroll ;" id="sandwich-form">
                         <div class="type">
                             <h2 class="head1">Sandwiches (3.50 USD)</h2>
+                            <input type="hidden" name="price" value="3.5">
                             <input type="radio" required id="hamcheese" name="filling-type" value="hamcheese">
                             <label for="hamcheese"> Ham and Cheese</label><br>
                             <p> 2 slices of ham with one slice of American cheese</p>
@@ -746,7 +753,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -763,10 +770,11 @@
                 <a class="close" href="#toast">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="toast-form">
                     
                         <div class="bread">
                             <h2 class="head2">Toast (1.00 USD)</h2>
+                            <input type="hidden" name="price" value="1.0">
                             <input type="radio" required id="panini" name="bread" value="panini">
                             <label for="panini">Panini</label><br class="breaker">
                             <input type="radio" required id="rye" name="bread" value="rye">
@@ -789,7 +797,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -805,8 +813,9 @@
                 <a class="close" href="#bacon">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
-                        <h2 class="head2">Bacon (0.50 USD)</h2>
+                    <form action="./menu.html" id="bacon-form">
+                        <h2 class="head2">Bacon (1.50 USD)</h2>
+                        <input type="hidden" name="price" value="1.5">
                         <h3> Cut-size</h3>
                             <input type="radio" required id="thin" name="bacon" value="thin">
                             <label for="thin">Thin-cut bacon</label><br class="breaker">
@@ -818,7 +827,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -834,8 +843,9 @@
                 <a class="close" href="#ham">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
-                        <h2 class="head2">Ham (0.50 USD)</h2>
+                    <form action="./menu.html" id="menu2-form" id="ham-form">
+                        <h2 class="head2">Ham (1.50 USD)</h2>
+                        <input type="hidden" name="price" value="1.5">
                         <h3> Ham Type:</h3>
                             <input type="radio" required id="pork" name="ham" value="pork">
                             <label for="pork">Toast Ham</label><br class="breaker">
@@ -849,7 +859,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -865,8 +875,9 @@
                 <a class="close" href="#egg">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="egg-form">
                         <h2 class="head2">Egg (0.50 USD)</h2>
+                        <input type="hidden" name="price" value="0.5">
                         <h3> Egg Type:</h3>
                             <input type="radio" required id="over-easy" name="egg" value="over-easy">
                             <label for="over-easy">Over Easy</label><br class="breaker">
@@ -884,7 +895,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -900,8 +911,9 @@
                 <a class="close" href="#salad">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="salad-form">
                         <h2 class="head2">Salad (3.50 USD)</h2>
+                        <input type="hidden" name="price" value="3.5">
                         <div class="type">
                         <h3> Salad Type:</h3>
                             <input type="radio" required id="greek" name="salad" value="greek">
@@ -920,7 +932,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -938,8 +950,9 @@
                 <a class="close" href="#sausage">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="sausage-form">
                         <h2 class="head2">Sausage (2.00 USD)</h2>
+                        <input type="hidden" name="price" value="2">
                         <div class="type">
                         <h3> Sausage Type:</h3>
                             <input type="radio" required id="hot-dog" name="sausage" value="hot-dog">
@@ -954,7 +967,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -973,8 +986,9 @@
                 <a class="close" href="#coffee">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="coffee-form">
                         <h2 class="head2">Coffee (2.00 USD)</h2>
+                        <input type="hidden" name="price" value="2">
                         <div class="type">
                         <h3> Coffee Type:</h3>
                             <input type="radio" required id="americano" name="coffee" value="americano">
@@ -1006,7 +1020,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -1023,8 +1037,9 @@
                 <a class="close" href="#tea">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="tea-form">
                         <h2 class="head2">Tea (2.00 USD)</h2>
+                        <input type="hidden" name="price" value="2">
                         <div class="type">
                         <h3> Tea Type:</h3>
                             <input type="radio" required id="green" name="tea" value="green">
@@ -1066,7 +1081,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -1077,14 +1092,15 @@
                 </div>
                 </div>
             </div>
-            <div id="milk-dropdown"class="drop">
+            <div id="milk-dropdown" class="drop" >
                 <div class="popup">
                 <h1>Milkshake</h1>
                 <a class="close" href="#coffee">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="milk-form">
                         <h2 class="head2">Milkshake (2.00 USD)</h2>
+                        <input type="hidden" name="price" value="2">
                         <div class="type">
                         <h3> Milkshake Type:</h3>
                             <input type="radio" required id="vanilla-milkshake" name="milkshake" value="vanilla-milkshake">
@@ -1107,7 +1123,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -1121,11 +1137,12 @@
             <div id="choco-dropdown"class="drop">
                 <div class="popup">
                 <h1>Chocolate Drink</h1>
-                <a class="close" href="#hotchoco">&times;</a>
+                <a class="close" href="#choco">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="choco-form">
                         <h2 class="head2">Chocolate Drink (1.50 USD)</h2>
+                        <input type="hidden" name="price" value="1.5">
                         <div class="type">
                             <h3> Temperature:</h3>
                             <input type="radio" required id="hot" name="temp" value="hot">
@@ -1137,12 +1154,12 @@
                             <br>
                             <br>
                             <input type="checkbox" id="malt" name="malt" value="malt">
-                            <label for="malt">Add malt power (+0.50 USD)</label>
+                            <label for="malt">Add malt power</label>
                             <hr>
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -1159,8 +1176,9 @@
                 <a class="close" href="#soda">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="soda-form">
                         <h2 class="head2">Soda (2.00 USD)</h2>
+                        <input type="hidden" name="price" value="2">
                         <div class="type">
                         <h3> Soda Type:</h3>
                             <input type="radio" required id="coke-soda" name="soda" value="coke-soda">
@@ -1185,7 +1203,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br> <br>
                             <br>
                             <br>
@@ -1202,8 +1220,9 @@
                 <a class="close" href="#juice">&times;</a>
                 <hr>
                 <div class="content">
-                    <form action="./menu.html">
+                    <form action="./menu.html" id="juice-form">
                         <h2 class="head2">Juice (2.00 USD)</h2>
+                        <input type="hidden" name="price" value="2">
                         <div class="type">
                         <h3> Juice Type:</h3>
                             <input type="radio" required id="orange-juice" name="juice" value="orange-juice">
@@ -1228,7 +1247,7 @@
                             <br>
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            <input type="submit" value="Add to order"> <br>
+                            <input type="submit" value="Add to order" class="subm"> <br>
                             <br>
                             <br>
                             <br>
